@@ -1,7 +1,7 @@
 import { Item, ItemType } from "../types";
 
 // Sample data of inventory items
-const sampleItems: Item[] = [
+export const mockedItems: Item[] = [
   { id: "1", name: ItemType.Water, description: "Clean drinking water" },
   { id: "2", name: ItemType.Food, description: "Non-perishable food items" },
   {
@@ -21,5 +21,5 @@ export async function getItems(): Promise<Item[]> {
   // Simulate a delay to mimic network latency
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return sampleItems;
+  return mockedItems;
 }

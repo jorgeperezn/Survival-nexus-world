@@ -1,7 +1,7 @@
 import { Survivor } from "@/types";
 
 // Sample data of survivors
-const mockedSurvivors: Survivor[] = [
+export const mockedSurvivors: Survivor[] = [
   {
     name: "John Doe",
     age: 30,
@@ -12,7 +12,7 @@ const mockedSurvivors: Survivor[] = [
       { itemId: "2", quantity: 4 },
     ],
     infected: false,
-    dateAdded: new Date(),
+    dateAdded: new Date('2024-04-5'),
   },
   {
     name: "Jane Smith",
@@ -24,7 +24,7 @@ const mockedSurvivors: Survivor[] = [
       { itemId: "3", quantity: 4 },
     ],
     infected: true,
-    dateAdded: new Date(),
+    dateAdded: new Date('2024-04-6'),
   },
 ];
 
