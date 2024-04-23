@@ -1,9 +1,21 @@
 import { Badge } from "@/app/components/badge";
 import { InformationCircleIcon } from "@heroicons/react/16/solid";
 
+import { Survivor } from "@/types";
+
+import { getSurvivors } from "@/services/survivors";
+
 interface ReportsPageProps {}
 
-const ReportsPage = (props: ReportsPageProps) => {
+const ReportsPage = async (props: ReportsPageProps) => {
+  const survivors: Survivor[] = await getSurvivors();
+
+  const healthySurvivorsCount = survivors.filter(
+    (survivor) => !survivor.infected
+  ).length;
+
+  const infectedSurvivorsCount = survivors.length - healthySurvivorsCount;
+
   const currentMonthGrowth = 5;
 
   const reportCards = [
@@ -12,7 +24,7 @@ const ReportsPage = (props: ReportsPageProps) => {
       title: "Number of Healthy Survivors",
       growth: "+5%",
       growthType: true,
-      highlight: "1,205",
+      highlight: healthySurvivorsCount,
       timeLabel: "Last 30 days",
     },
     {
@@ -20,7 +32,7 @@ const ReportsPage = (props: ReportsPageProps) => {
       title: "Number of Infected Survivors",
       growth: "-12%",
       growthType: false,
-      highlight: "39",
+      highlight: infectedSurvivorsCount,
       timeLabel: "Last 30 days",
     },
     {
