@@ -8,6 +8,7 @@ import { Badge } from "@/app/components/badge";
 import { Avatar } from "@/app/components/avatar";
 
 import { Survivor } from "@/types";
+import { InformationCircleIcon } from "@heroicons/react/16/solid";
 
 interface SurvivorListProps {
   survivors: Survivor[];
@@ -71,7 +72,10 @@ export const SurvivorList = ({ survivors }: SurvivorListProps) => {
           <h2 className="text-2xl font-bold dark:text-white">
             List of survivors
           </h2>
-          <p>You have {healthySurvivorsCount} healthy survivors</p>
+          <div className="flex items-center gap-2">
+            <p>You have {healthySurvivorsCount} healthy survivors</p>
+            <InformationCircleIcon className="h-4 w-4" />
+          </div>
         </div>
 
         <button

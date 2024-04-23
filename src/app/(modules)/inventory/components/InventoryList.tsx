@@ -7,6 +7,7 @@ import { Table } from "@/app/components/table";
 import { Avatar } from "@/app/components/avatar";
 
 import { InventoryItem, Item, Survivor } from "@/types";
+import { InformationCircleIcon } from "@heroicons/react/16/solid";
 
 interface InventoryListProps {
   survivors: Survivor[];
@@ -77,7 +78,10 @@ export const InventoryList = (props: InventoryListProps) => {
         <h2 className="text-2xl font-bold dark:text-white">
           List of Survivors inventories
         </h2>
-        <p>You have {totalItems} inventories logged</p>
+        <div className="flex items-center gap-2">
+          <p>You have {totalItems} inventories logged</p>
+          <InformationCircleIcon className="h-4 w-4" />
+        </div>
       </div>
 
       <Table headers={inventoryHeaders} rows={inventoryRows} />
