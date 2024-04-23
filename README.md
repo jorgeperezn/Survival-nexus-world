@@ -21,6 +21,7 @@ Note: This is a [Next.js](https://nextjs.org/) project bootstrapped with [`creat
 
 - Frontend: Next.js 14 with React (Typescript)
 - Styling: Tailwind CSS
+- **Unit tests:** (Jest) 
 
 ## Mocked Services
 
@@ -44,6 +45,12 @@ Run the development server:
 
 ```bash
 npm run dev
+```
+
+Run the tests:
+
+```bash
+npm run test
 ```
 
 The application should now be running on http://localhost:3000.
