@@ -63,4 +63,6 @@ The application should now be running on http://localhost:3000.
 
 - **Work with real APIs**: Replace the mocked services with real APIs to fetch data from a backend server, enabling the application to work with real-time data and interact with external systems.
 
-![Dark theme](image.png)
+![Dark theme](./src/assets/images/dark-theme.png)
+
+![Light theme](./src/assets/images/light-theme.png)
